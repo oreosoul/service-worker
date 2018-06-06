@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="/manifest.json">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="./css/style.css">
 <body>
-    
 </body>
+<script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
 <script src="./js/main.js"></script>
+<script>
+    axios.get('http://blog.jobbole.com/feed/')
+        .then(response => {
+            console.log(response)
+        })
+        .catch(response => {
+            console.log(response)
+        })
+</script>
 </html>

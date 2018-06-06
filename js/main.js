@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../sw.js').then( restration => {
+    navigator.serviceWorker.register('/sw.js').then( restration => {
         // registration success
         console.log('Registration success:', restration.scope)
     }).catch( err => {
