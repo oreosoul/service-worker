@@ -21,6 +21,8 @@ header {
     align-items: center;
 }
 section {
+    max-width: 1240px;
+    margin: 0 auto;
     padding: 2em;
     box-sizing: border-box;
 }
@@ -65,7 +67,6 @@ a:hover {
     border: 3px solid white;
 }
 .movie-item:hover {
-    background-color: #ffdf00;
     border: 3px solid black;
     transform: scale(1.1);
     z-index: 999;
@@ -94,7 +95,6 @@ a:hover {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    font-size: 14px;
     flex-wrap: wrap;
     align-content: space-between;
 }
@@ -102,7 +102,7 @@ a:hover {
     width: 100%;
     color: black;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
 }

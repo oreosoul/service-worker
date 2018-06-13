@@ -3,6 +3,6 @@
     "short_name": "Progressive Times",
     "start_url": "/index.html",
     "display": "standalone",
-    "theme_color": "#FFDF00",
-    "background_color": "#FFDF00"
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF"
   }
