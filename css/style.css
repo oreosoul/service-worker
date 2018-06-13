@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+    transition: all .3s linear;
 }
 html {
     background-color: white;
@@ -35,7 +36,11 @@ img:hover {
     filter: grayscale(0);
 }
 a {
+    text-decoration: none;
     color: black;
+}
+a:hover {
+    background: #ffdf00;
 }
 .title{
     text-align: center;
@@ -53,9 +58,17 @@ a {
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
+    margin-bottom: 50px;
     background-color: inherit;
     width: 33.33%;
+    border: 3px solid white;
+}
+.movie-item:hover {
+    background-color: #ffdf00;
+    border: 3px solid black;
+    transform: scale(1.1);
+    z-index: 999;
 }
 .movie-img-wrap {
     height: 260px;
@@ -89,6 +102,12 @@ a {
     width: 100%;
     color: black;
     text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.movie-year {
+    color: rgb(125, 125, 125);
 }
 @media screen and (max-width: 1024px) {
     .movie-item {

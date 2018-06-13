@@ -7,7 +7,8 @@ self.addEventListener('install', event => {
             '/index.js',
             '/index.html',
             '/sw.js',
-            '/css/style.css'
+            '/css/style.css',
+            '/js/main.css'
         ])
         self.skipWaiting()
     }))

@@ -19,7 +19,6 @@
 </body>
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/api.js"></script>
 <script>
     function handleResponse(response){
         let movieItems = new DocumentFragment()
@@ -28,11 +27,11 @@
             let li = document.createElement("li")
             li.classList.add('movie-item')
             li.innerHTML = `
-                <div class="movie-img-wrap"><div class="movie-img" style="background-image:url('${movie.images.small}')"></div></div>
+                <a href="${movie.alt}" class="movie-img-wrap"><div class="movie-img" style="background-image:url('${movie.images.small}')"></div></a>
                 <div class="movie-info">
-                    <div class="movie-title"><a href="${movie.alt}">${movie.title}</a><span>${movie.year}</span></div>
-                    <div class="movie-actors">导演：<a href="https://movie.douban.com/celebrity/1047973/">弗兰克·德拉邦特</a></div>
-                    <div>主演：<a href="https://movie.douban.com/celebrity/1054521/">蒂姆·罗宾斯</a><a href="https://movie.douban.com/celebrity/1054534/">摩根·弗里曼</a><a href="https://movie.douban.com/celebrity/1041179/">鲍勃·冈顿</a></div>
+                    <div class="movie-title"><a href="${movie.alt}">${movie.title}</a><span class="movie-year">(${movie.year})</span></div>
+                    <div class="movie-actors">导演：<a href="${movie.directors[0].alt}">${movie.directors[0].name}</a></div>
+                    <div>主演：<a href="${movie.casts[0].alt}">${movie.casts[0].name}</a> <a href="${movie.casts[1].alt}">${movie.casts[1].name}</a> <a href="${movie.casts[2].alt}">${movie.casts[2].name}</a></div>
                     <div class="movie-rating">评分：<span>${movie.rating.average}/${movie.rating.max}</span></div>
                 </div>`
             movieItems.appendChild(li)
